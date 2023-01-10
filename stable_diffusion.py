@@ -53,7 +53,7 @@ with gr.Blocks() as demo:
         with gr.Column(scale=1, ):
             image_out = gr.Image(label = '输出(output)')
         with gr.Column(scale=1, ):
-            image_in = gr.Image(source='upload', elem_id="image_upload", type="pil", label="参考图（非必须）(ref)")
+            # image_in = gr.Image(source='upload', elem_id="image_upload", type="pil", label="参考图（非必须）(ref)")
             prompt = gr.Textbox(label = '提示词(prompt)')
             submit_btn = gr.Button("生成图像(Generate)")
             with gr.Row(scale=0.5 ):
@@ -74,3 +74,4 @@ with gr.Blocks() as demo:
         # inpaint_btn.click(fn = infer_inpaint, inputs = [inpaint_prompt, width, height, image_in], outputs = image_out)
         # img2img_btn.click(fn = infer_img2img, inputs = [img2img_prompt, width, height, image_in], outputs = image_out)
 demo.queue(concurrency_count=1, max_size=8).launch()
+##
